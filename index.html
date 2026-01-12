@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'mantel mantel mantel'
+    'p1 - p2';
+  grid-tamplate-columns:
+    1fr 2fr 1fr;
+ 
+}
+.mantel{
+  grid-area: mantel;
+  background: red;
+}
+
+.container2{
+  width:100%;
+  height:100%;
+  display: grid;
+  grid-template-areas:
+    '. servilleta1 . . .'
+    'plat1 got1 . . servilleta2'
+    '. . . . plat2'
+    '. . . got2 .'
+    ;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.servilleta1{
+  grid-area: servilleta1;
+  background: pink;
+}
+.got1{
+  grid-area: got1;
+  border: 15px blue solid;
+  background: rgb(0,0,100);
+}
+.plat1{
+  grid-area: plat1;
+  border-radius: 100%;
+  background: grey;
+}
+.servilleta2{
+  grid-area: servilleta2;
+  background: purple;
+}
+.got2{
+  grid-area: got2;
+  border: 5px blue solid;
+  background: rgb(0,0,100);
+}
+.plat2{
+  grid-area: plat2;
+  border-radius: 100%;
+  background: white;
+}
+.p1{
+  grid-area: p1;
+  background: blue;
+}
+.p2{
+  grid-area: p2;
+  background: green;
+}
+</style>
+<body>
+    <div class='container'>
+  <div class='mantel'>
+     <div class='container2'>
+      <div class='servilleta1'></div>
+      <div class='plat1'></div>
+      <div class='got1'></div>
+      <div class='servilleta2'></div>
+      <div class='plat2'></div>
+      <div class='got2'></div>
+          </div>
+    </div>
+  <div class='p1'></div>
+  <div class='p2'></div>
+</div>
+</body>
+</html>
